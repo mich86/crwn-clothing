@@ -7,16 +7,15 @@ const INITIAL_STATE = {
 
 //ES6 means state can be assigned the initial state
 const userReducer = (state = INITIAL_STATE, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'SET_CURRENT_USER':
     return {
       ...state,
       currentUser: action.payload
     }
-  
     default:
     return state;
   }
-}
+};
 
 export default userReducer;
